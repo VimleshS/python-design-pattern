@@ -47,4 +47,4 @@ Strategy pattern:
 	Strategy as a function
 	Since function is a first class citizen we can achieve that via a function/lambda
 
-	Modify the Shippin
+	Modify the ShippingCost expects a callable function instead of a object implemtating AbsStrategy.
