@@ -1,0 +1,35 @@
+Consider a dashboard application
+KPIs
+    Open Ticket
+    New Ticket in an last hour
+    Closed ticket in an last hour
+
+    Dashboard is a observer
+    KPI source is a publisher
+
+Refer to the prgram in python-design-priciples
+
+Observer pattern:
+	- One to many relationship
+	- Between a set of object
+	- When a state of changes its dependents are notified
+	- Also known as
+	 	Dependents pattern
+	 	Publish-Subscribe pattern
+
+	from UML:
+	1- Abstract subject with attach, detach and notify, next we have abstract observer with require one method Update
+	2- The concreate subject implements the require methods attach, detach and update and notify commnaly. It also implements a method GetState for observer
+	to get the subjects state when it changes
+	The concreate observer implement update method.
+
+	1. When a subject changes it loops thro' all the attached observer and calls update method
+	2.When update called, it calls the subjects getstate method to acquire the changes.
+	3. In respose to getState subject returns State requested
+
+	Upon
+	- Seperates the concerns of the subject object and main programs
+	- Doing so, it helps to keep in syns with S of solid principles
+	- Also by creating abc, we are following the I in SP
+	- O/C in SP
+	- by progrmming abc we are following D in SP
