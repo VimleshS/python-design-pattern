@@ -1,0 +1,50 @@
+Shipping cost calculator.
+Must support:
+    -Federal Express
+    -UPS
+    -Postal Service
+
+Must be extendable (add new shipper)
+
+From solution_1 we discovered following problem.
+    Violates Single responsibilty
+    Violates Open/Closed
+    Violates Dependency Inversion(we are programming to a concrete class)
+    Long list of if/elif clauses.
+
+These are the things which can be handled better with Strategy pattern
+
+Strategy pattern:
+	- Family of algorithm
+	- Encapsulate each one and seperate them from context where they operate.
+	- Make them interchangeable
+	- Algorithm vary independently
+	- Also know as policy pattern
+
+	several techniques.
+	- define a abstract method(use abc) and implement that in a seperate class for each one of them
+	- define a lambda/function
+	- identify if they are many if/elif present.
+
+	How?
+	Within some context we have an interface(abc for python) that is common to all supported algorithm
+	Context uses this interface to call various algorithm defined by the concrete strategy that implements the base class
+	Each concrete strategy takes the same input and return the same output but it is free to do so as the algorithm being implemented dictates.
+
+
+	For our example Context will be ShippingCost class which will use Abstract Base class called
+	AbsStrategy to executes the various concrete strateies one each for federal, ups, postal.
+	This also helps to add a new concrete strategy.
+
+	Achieved:
+		-Fixed above problem
+		-Test algorithm in isolation
+		-Test outer code with deterministic mock
+		-no more if/elif
+		** Still there is a D violation in calling which is handled in factory pattern
+
+	Other variation
+	Strategy as a function
+	Since function is a first class citizen we can achieve that via a function/lambda
+
+	Modify the Shippin
