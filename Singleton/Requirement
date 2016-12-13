@@ -1,0 +1,16 @@
+Logging subsystem
+    Log events to a file
+    Only one instance can write to a file
+    Need to control access
+    Classic singleton pattern
+
+
+Singleton:
+	Class has one instance
+	control access to limited resourses
+		- Device access
+		- Buffer pool
+		- Web/Db connection pools
+	Provide a global point access
+	Class responsible for its one instance
+	Lazy construction

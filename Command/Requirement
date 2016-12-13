@@ -1,0 +1,27 @@
+Command line order processing program
+Three operation
+    - CreateOrder
+    - UpdateQunatity
+    - ShipOrder
+
+    Parse the command line args
+    Execute command
+    Notify user and log results
+
+
+
+Command Pattern:
+	Used in:
+		Encapsulate a request as a object
+		Parametrized objects
+		Helps in Queues and log operation
+			- Updating a db or creating a audit trail request.
+		Helps for sequences of command
+		Aslo called as
+			- Action Pattern
+			- Transaction Pattern
+
+    What does Command do?
+	- It encapsulates the command in a concrete command class(from client)
+	- Information is hidden from the client.
+	- Easy to add a new Command concreate class hence support O/C in SP
