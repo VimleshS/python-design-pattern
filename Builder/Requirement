@@ -1,0 +1,10 @@
+Builder pattern:
+	pattern helps in building complex object
+	Seperates construction of an object from its representaion
+	Encapsulate object creation
+	Multistep construction process
+	Implementation can vary
+	Client sees only abstraction
+
+	Ex.
+		Custom Computer Builder
